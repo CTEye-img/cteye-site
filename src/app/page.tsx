@@ -105,15 +105,15 @@ export default function CTEyeLanding() {
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">How it works</h2>
           <div className="mt-8 grid md:grid-cols-3 gap-6">
-           <Card title="OPRO Guard + IMUs" body="Two IMUs on a flexible PCB in an OPRO-fitted guard capture linear and angular kinematics at high sample rates." />
-           <Card title="Noise Handling" body="A jaw-noise model filters bite/talk artefacts; wireless charging keeps the form factor seamless." />
-           <Card title="From Kinematics → Tissue Strain" body="Finite-element trained BrainStrain™ maps are warped to the athlete’s skull with thin-plate splines to estimate local strain." />
-         </div>
-         <div className="mt-6 grid md:grid-cols-3 gap-6">
-           <Card title="App & Dashboard" body="Impact feed with severity and punch type; diagnostics mini-games track recovery against baseline." />
-           <Card title="BrainScore & Recovery" body="Session-level BrainScore and trajectory inform when to back off or push, based on impact history + cognitive trends." />
-           <Card title="APIs & Export" body="CSV/JSON export; secure sharing with coaches and clinicians (opt-in)." />
-         </div>
+            <Card title="Smart Mouthguard" body="An OPRO-fit guard houses motion sensors that record every hit the moment it happens." />
+            <Card title="Clean Signal" body="Built-in filtering cuts out jaw chatter, and simple charging keeps athletes training without fuss." />
+            <Card title="BrainStrain™ Map" body="Proprietary models translate raw motion into a clear picture of how the brain experiences each impact." />
+          </div>
+          <div className="mt-6 grid md:grid-cols-3 gap-6">
+            <Card title="Live Coach View" body="The app streams a live impact feed with intensity and punch type so coaches can adjust on the spot." />
+            <Card title="Recovery Guidance" body="BrainScore tracks cumulative load and quick cognitive checks flag when to back off or push." />
+            <Card title="Secure Sharing" body="Athletes choose who sees the data, with simple exports for coaches, medics, or investors." />
+          </div>
         </div>
       </section>
 
