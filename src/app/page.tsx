@@ -105,12 +105,12 @@ export default function CTEyeLanding() {
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">How it works</h2>
           <div className="mt-8 grid md:grid-cols-3 gap-6">
-            <Card title="Smart Mouthguard" body="An OPRO-fit guard houses motion sensors that record every hit the moment it happens." />
-            <Card title="Clean Signal" body="Built-in filtering cuts out jaw chatter, and simple charging keeps athletes training without fuss." />
+            <Card title="Smart Mouthguard" body="An OPRO-made mouth guard houses sensors that record every impact the moment it happens." />
+            <Card title="Clean Signal" body="Built-in filtering cuts out jaw chatter, ensuring all impacts are captured accuratley.." />
             <Card title="BrainStrain™ Map" body="Proprietary models translate raw motion into a clear picture of how the brain experiences each impact." />
           </div>
           <div className="mt-6 grid md:grid-cols-3 gap-6">
-            <Card title="Live Coach View" body="The app streams a live impact feed with intensity and punch type so coaches can adjust on the spot." />
+            <Card title="Live Coach View" body="The app streams a live impact feed with intensity and impact types so coaches can adjust on the spot." />
             <Card title="Recovery Guidance" body="BrainScore tracks cumulative load and quick cognitive checks flag when to back off or push." />
             <Card title="Secure Sharing" body="Athletes choose who sees the data, with simple exports for coaches, medics, or investors." />
           </div>
@@ -249,7 +249,7 @@ export default function CTEyeLanding() {
             <div className="text-xs">© {new Date().getFullYear()} CTEye Ltd. All rights reserved.</div>
           </div>
           <div className="flex items-center gap-4">
-            <a href="mailto:hello@cteye.ai" className="underline">hello@cteye.ai</a>
+            <a href="mailto:info@cteye.co.uk" className="underline">hello@cteye.ai</a>
             <a href="#pilot" className="inline-flex items-center rounded-xl border border-gray-300 px-3 py-1.5 text-xs font-medium hover:bg-gray-50">Get Early Access</a>
           </div>
         </div>
