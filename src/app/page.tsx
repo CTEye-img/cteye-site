@@ -155,76 +155,78 @@ export default function CTEyeLanding() {
       </section>
 
       {/* Pilot / Investors */}
-      <section id="pilot" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-2xl font-semibold tracking-tight">Pilot with CTEye</h2>
-            <p className="mt-3 text-gray-700">We’re onboarding a small number of clubs and fighters. Tell us about your setup.</p>
+      <section id="pilot" className="border-y border-gray-200 bg-gray-50/60">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="rounded-2xl border border-gray-200 p-6">
+              <h2 className="text-2xl font-semibold tracking-tight">Pilot with CTEye</h2>
+              <p className="mt-3 text-gray-700">We’re onboarding a small number of clubs and fighters. Tell us about your setup.</p>
 
-            {submitState === "success" ? (
-              <div className="mt-4 rounded-xl bg-green-50 border border-green-200 p-4 text-sm text-green-800">
-                Thanks — your application has been received. We’ll be in touch shortly.
-              </div>
-            ) : (
-              <form onSubmit={handlePilotSubmit} className="mt-4 space-y-3">
-                <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-                <Input name="name" label="Name" placeholder="Your full name" required />
-                <Input name="org" label="Club / Organization" placeholder="Team or gym" />
-                <Input name="email" label="Email" placeholder="you@example.com" type="email" required />
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <label className="block">
-                    <span className="text-sm text-gray-700">Role</span>
-                    <select name="role" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900">
-                      <option>Athlete</option>
-                      <option>Coach</option>
-                      <option>Club / Federation</option>
-                      <option>Medical / Research</option>
-                    </select>
-                  </label>
-                  <label className="block">
-                    <span className="text-sm text-gray-700">Sport</span>
-                    <select name="sport" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900">
-                      <option>Boxing</option>
-                      <option>MMA</option>
-                      <option>Muay Thai</option>
-                      <option>Rugby</option>
-                      <option>Other</option>
-                    </select>
-                  </label>
+              {submitState === "success" ? (
+                <div className="mt-4 rounded-xl bg-green-50 border border-green-200 p-4 text-sm text-green-800">
+                  Thanks — your application has been received. We’ll be in touch shortly.
                 </div>
+              ) : (
+                <form onSubmit={handlePilotSubmit} className="mt-4 space-y-3">
+                  <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+                  <Input name="name" label="Name" placeholder="Your full name" required />
+                  <Input name="org" label="Club / Organization" placeholder="Team or gym" />
+                  <Input name="email" label="Email" placeholder="you@example.com" type="email" required />
 
-                <Input name="athletes" label="# of athletes (approx)" placeholder="e.g., 12" type="number" />
-                <Input name="location" label="Location" placeholder="City, Country" />
-                <textarea name="notes" placeholder="What do you want to learn or prove?" className="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 min-h-[96px]"></textarea>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label className="block">
+                      <span className="text-sm text-gray-700">Role</span>
+                      <select name="role" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900">
+                        <option>Athlete</option>
+                        <option>Coach</option>
+                        <option>Club / Federation</option>
+                        <option>Medical / Research</option>
+                      </select>
+                    </label>
+                    <label className="block">
+                      <span className="text-sm text-gray-700">Sport</span>
+                      <select name="sport" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900">
+                        <option>Boxing</option>
+                        <option>MMA</option>
+                        <option>Muay Thai</option>
+                        <option>Rugby</option>
+                        <option>Other</option>
+                      </select>
+                    </label>
+                  </div>
 
-                <label className="flex items-start gap-2 text-sm text-gray-700">
-                  <input type="checkbox" name="consent" required className="mt-1" />
-                  <span>I agree to be contacted about the pilot and acknowledge my data will be handled per CTEye’s privacy policy.</span>
-                </label>
+                  <Input name="athletes" label="# of athletes (approx)" placeholder="e.g., 12" type="number" />
+                  <Input name="location" label="Location" placeholder="City, Country" />
+                  <textarea name="notes" placeholder="What do you want to learn or prove?" className="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 min-h-[96px]"></textarea>
 
-                <input type="hidden" name="_subject" value="New CTEye Pilot Application" />
+                  <label className="flex items-start gap-2 text-sm text-gray-700">
+                    <input type="checkbox" name="consent" required className="mt-1" />
+                    <span>I agree to be contacted about the pilot and acknowledge my data will be handled per CTEye’s privacy policy.</span>
+                  </label>
 
-                <button type="submit" className="w-full rounded-xl bg-black text-white px-4 py-2.5 text-sm font-medium hover:opacity-90 disabled:opacity-60" disabled={submitState === 'loading'}>
-                  {submitState === 'loading' ? 'Submitting…' : 'Apply'}
-                </button>
+                  <input type="hidden" name="_subject" value="New CTEye Pilot Application" />
 
-                {submitState === 'error' && (
-                  <div className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-xl p-3">{errorMsg}</div>
-                )}
-              </form>
-            )}
+                  <button type="submit" className="w-full rounded-xl bg-black text-white px-4 py-2.5 text-sm font-medium hover:opacity-90 disabled:opacity-60" disabled={submitState === 'loading'}>
+                    {submitState === 'loading' ? 'Submitting…' : 'Apply'}
+                  </button>
 
-            <p className="mt-3 text-xs text-gray-500">We’ll reply within a few days. Limited slots.</p>
-          </div>
-          <div id="investors" className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-2xl font-semibold tracking-tight">For Investors</h2>
-            <p className="mt-3 text-gray-700">Building the safety and performance layer for combat sports. We’re raising to complete clinical validation and scale manufacturing.</p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <a href="/CTEye_OnePager.pdf" className="inline-flex items-center rounded-xl border border-gray-900 px-4 py-2.5 text-sm font-medium hover:bg-gray-900 hover:text-white">Download One-Pager</a>
-              <a href="/CTEye_Deck.pdf" className="inline-flex items-center rounded-xl border border-gray-300 px-4 py-2.5 text-sm font-medium hover:bg-gray-50">Request Deck</a>
+                  {submitState === 'error' && (
+                    <div className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-xl p-3">{errorMsg}</div>
+                  )}
+                </form>
+              )}
+
+              <p className="mt-3 text-xs text-gray-500">We’ll reply within a few days. Limited slots.</p>
             </div>
-            <p className="mt-3 text-xs text-gray-500">Prefer to talk? <a href="mailto:press@cteye.ai" className="underline">press@cteye.ai</a></p>
+            <div id="investors" className="rounded-2xl border border-gray-200 p-6">
+              <h2 className="text-2xl font-semibold tracking-tight">For Investors</h2>
+              <p className="mt-3 text-gray-700">Building the safety and performance layer for combat sports. We’re raising to complete clinical validation and scale manufacturing.</p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a href="/CTEye_OnePager.pdf" className="inline-flex items-center rounded-xl border border-gray-900 px-4 py-2.5 text-sm font-medium hover:bg-gray-900 hover:text-white">Download One-Pager</a>
+                <a href="/CTEye_Deck.pdf" className="inline-flex items-center rounded-xl border border-gray-300 px-4 py-2.5 text-sm font-medium hover:bg-gray-50">Request Deck</a>
+              </div>
+              <p className="mt-3 text-xs text-gray-500">Prefer to talk? <a href="mailto:press@cteye.ai" className="underline">press@cteye.ai</a></p>
+            </div>
           </div>
         </div>
       </section>
