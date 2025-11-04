@@ -54,9 +54,9 @@ export default function CTEyeLanding() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white">
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,#f97316,transparent_55%)]" aria-hidden="true" />
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_bottom_right,#f97316,transparent_60%)]" aria-hidden="true" />
+      <section id="top" className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_top_left,#f97316,transparent_55%)]" aria-hidden="true" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_bottom_right,#f97316,transparent_60%)]" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
@@ -96,6 +96,7 @@ export default function CTEyeLanding() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <div className="mx-auto mb-12 h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-orange-500/40 to-transparent" aria-hidden="true" />
         <div className="grid md:grid-cols-3 gap-6 text-sm">
           <Stat kpi="< 50 g" label="Typical training impacts stay under control" />
           <Stat kpi="> 80%" label="Less jaw noise, more reliable signal" />
@@ -115,7 +116,7 @@ export default function CTEyeLanding() {
       </section>
 
       {/* How it works */}
-      <section id="tech" className="border-y border-slate-900/60 bg-slate-950 text-slate-100">
+      <section id="tech" className="border-y border-slate-800/60 bg-slate-900 text-slate-100">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-400">How it works</p>
           <h2 className="mt-3 text-3xl md:text-[2.4rem] font-semibold tracking-tight text-white">From bite to BrainScore</h2>
@@ -177,10 +178,11 @@ export default function CTEyeLanding() {
       </section>
 
       {/* Pilot / Investors */}
-      <section id="pilot" className="border-y border-slate-900/60 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <section id="pilot" className="border-y border-slate-800/60 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-24">
+          <div className="absolute inset-x-0 -top-6 mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-orange-500/40 to-transparent" aria-hidden="true" />
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="rounded-2xl border border-white/10 bg-white/90 p-6 text-slate-900 shadow-xl shadow-orange-500/10">
+            <div className="rounded-2xl border border-white/20 bg-white p-6 text-slate-900 shadow-xl shadow-orange-500/10">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500">Pilot programme</p>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Pilot with CTEye</h2>
               <p className="mt-3 text-slate-700">We’re onboarding a small number of clubs and fighters. Tell us about your setup.</p>
@@ -241,7 +243,7 @@ export default function CTEyeLanding() {
 
               <p className="mt-3 text-xs text-slate-500">We’ll reply within a few days. Limited slots.</p>
             </div>
-            <div id="investors" className="rounded-2xl border border-white/10 bg-slate-950/50 p-6 backdrop-blur">
+            <div id="investors" className="rounded-2xl border border-white/20 bg-slate-900/70 p-6 backdrop-blur">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-400">For investors</p>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white">Building the safety & performance layer</h2>
               <p className="mt-3 text-slate-200">We’re raising to complete clinical validation and scale manufacturing of the CTEye system.</p>
@@ -288,7 +290,7 @@ export default function CTEyeLanding() {
 
 function Stat({ kpi, label }: { kpi: string; label: string }) {
   return (
-    <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white/80 p-5 shadow-sm shadow-orange-500/5 backdrop-blur">
+    <div className="relative overflow-hidden rounded-xl border border-slate-100 bg-white p-5 shadow-sm shadow-orange-500/5">
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-transparent" aria-hidden="true" />
       <div className="relative text-2xl font-semibold tracking-tight text-slate-900">{kpi}</div>
       <div className="relative mt-2 text-sm text-slate-600">{label}</div>
@@ -298,7 +300,7 @@ function Stat({ kpi, label }: { kpi: string; label: string }) {
 
 function Card({ title, body }: { title: string; body: string }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-orange-500/60 hover:shadow-xl">
+    <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-orange-500/60 hover:shadow-xl">
       <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br from-orange-500/10 via-transparent to-transparent" aria-hidden="true" />
       <div className="relative font-semibold text-slate-900">{title}</div>
       <p className="relative mt-2 text-sm text-slate-600">{body}</p>
